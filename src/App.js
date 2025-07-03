@@ -250,7 +250,8 @@ function App() {
             }}
         >
             <img
-                src="https://i.ibb.co/QFwZZjJj/Copilot-20250628-030848-1.png"
+                src={require('./mascot_native.png')}
+                // src="https://i.ibb.co/QFwZZjJj/Copilot-20250628-030848-1.png"
                 alt="GoNative Bee"
                 className="w-full h-full object-contain"
                 style={{
@@ -276,7 +277,8 @@ function App() {
         >
             <div className="w-full h-full flex items-center justify-center text-2xl animate-pulse">
                 <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png"
+                    src={require('./btc.webp')}
+                    // src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png"
                     alt="BTC"
                     className="w-full h-full object-contain"
                     style={{
@@ -425,7 +427,7 @@ function App() {
                 </div>
             )}
 
-            <img style={{position: "absolute", left: 0, bottom: 0, width: 45, height: 45}} src="https://i.ibb.co/672b8Kjf/Copilot-20250618-173504.png" />
+            <img style={{position: "absolute", left: 0, bottom: 0, width: 45, height: 45}} src={require('./mg_logo.png')} alt={'mg'} />
         </div>
     );
 }
