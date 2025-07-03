@@ -392,7 +392,7 @@ function App() {
                 </div>
             )}
 
-            <img style={{position: "absolute", right: 0, bottom: 0, width: 45, height: 45}} src="https://i.ibb.co/672b8Kjf/Copilot-20250618-173504.png" />
+            <img style={{position: "absolute", left: 0, bottom: 0, width: 45, height: 45}} src="https://i.ibb.co/672b8Kjf/Copilot-20250618-173504.png" />
         </div>
     );
 }
