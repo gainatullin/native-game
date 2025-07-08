@@ -348,7 +348,7 @@ function App() {
             {/* Score */}
             <div className="absolute top-4 left-4 bg-white bg-opacity-80 px-4 py-2 rounded-lg">
                 <div className="text-2xl font-bold text-gray-800">Score: {Math.floor(score / 10)}</div>
-                {highScore > 0 && <div className="text-sm text-gray-600">High Score.: {highScore}</div>}
+                {highScore > 0 && <div className="text-sm text-gray-600">High Score: {highScore}</div>}
             </div>
 
             {/* Bitcoin counter */}
