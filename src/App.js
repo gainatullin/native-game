@@ -113,7 +113,7 @@ function App() {
 
     // Check collision
     const checkCollision = useCallback((bee, obstacle) => {
-        const padding = 5;
+        const padding = 13;
         return (
             bee.x + padding < obstacle.x + obstacle.width &&
             bee.x + BEE_SIZE - padding > obstacle.x &&
