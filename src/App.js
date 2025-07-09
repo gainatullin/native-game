@@ -12,7 +12,7 @@ function App() {
     const [highScore, setHighScore] = useState(0);
     const [isNewRecord, setIsNewRecord] = useState(false);
     const [canRestart, setCanRestart] = useState(true);
-    const [gameHeight, setGameHeight] = useState(600);
+    const [gameHeight, setGameHeight] = useState(200);
 
     const GROUND_HEIGHT = 350;
     const BEE_SIZE = 40;
@@ -25,14 +25,14 @@ function App() {
     useEffect(() => {
         const updateGameHeight = () => {
             const vh = window.innerHeight;
-            const vw = window.innerWidth;
 
             // На мобильных устройствах используем реальную высоту viewport
-            if (vw <= 768) {
-                setGameHeight(vh);
-            } else {
-                setGameHeight(600);
-            }
+            setGameHeight(vh);
+            // if (vw <= 768) {
+            //     setGameHeight(vh);
+            // } else {
+            //     setGameHeight(vh);
+            // }
         };
 
         updateGameHeight();
@@ -408,12 +408,12 @@ function App() {
             {gameState === 'gameOver' && (
                 <div style={{zIndex: 10}} className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                     <div className="bg-white p-4 rounded-lg text-center max-w-sm w-full sm:p-8">
-                        <h2 className="text-2xl font-bold text-red-600 mb-2 sm:text-4xl sm:mb-4">Game Over!</h2>
-                        <p className="text-lg text-gray-800 mb-1 sm:text-xl sm:mb-2">
+                        <h2 style={{fontFamily: 'Trebuchet MS, sans-serif'}} className="text-2xl font-bold text-red-600 mb-2 sm:text-4xl sm:mb-4">Game Over!</h2>
+                        <p style={{fontFamily: 'Trebuchet MS, sans-serif'}} className="text-lg text-gray-800 mb-1 sm:text-xl sm:mb-2">
                             Final Score: {Math.floor(score / 10)}
                         </p>
-                        <p className="text-xs text-gray-600 mb-2 sm:text-sm sm:mb-4">
-                            High Score.: {highScore}
+                        <p style={{fontFamily: 'Trebuchet MS, sans-serif'}} className="text-xs text-gray-600 mb-2 sm:text-sm sm:mb-4">
+                            High Score: {highScore}
                         </p>
                         <p className="text-xs text-gray-600 mb-4 sm:text-sm sm:mb-6">
                             The bee hit an obstacle while chasing Bitcoin
@@ -448,8 +448,8 @@ function App() {
             {isNewRecord && (
                 <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-4">
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg shadow-lg animate-pulse sm:px-8 sm:py-4">
-                        <div className="text-lg font-bold text-center mb-1 sm:text-3xl sm:mb-2">🏆 NEW RECORD! 🏆</div>
-                        <div className="text-sm text-center sm:text-xl">Score: {highScore}</div>
+                        <div style={{fontFamily: 'Courier New, sans-serif'}} className="text-lg font-bold text-center mb-1 sm:text-3xl sm:mb-2">🏆 NEW RECORD! 🏆</div>
+                        <div style={{fontFamily: 'Georgia, sans-serif'}} className="text-sm text-center sm:text-xl">Score: {highScore}</div>
                     </div>
                 </div>
             )}
