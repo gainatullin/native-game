@@ -55,15 +55,15 @@ function App() {
 
     // Load high score on component mount
     useEffect(() => {
-        const savedHighScore = sessionStorage.getItem('bitcoinChaseHighScore');
+        const savedHighScore = localStorage.getItem('bitcoinChaseHighScore');
         if (savedHighScore) {
             setHighScore(parseInt(savedHighScore));
         }
     }, []);
 
-    // Save high score to sessionStorage
+    // Save high score to localStorage
     const saveHighScore = useCallback((score) => {
-        sessionStorage.setItem('bitcoinChaseHighScore', score.toString());
+        localStorage.setItem('bitcoinChaseHighScore', score.toString());
         setHighScore(score);
     }, []);
 
